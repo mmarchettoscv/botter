@@ -89,7 +89,7 @@ async function generarPara(facturadorPage, factura) {
     `./downloads/factura-${process.env.USER_CUIL}-${dateAsString}.pdf`
   )
 
-  saveToCSV(dateFormatted(), factura.detalle, factura.monto)
+  saveToCSV(dateFormatted(), factura.descripcion, factura.monto)
 
   await facturadorPage.waitForTimeout(1000)
 
